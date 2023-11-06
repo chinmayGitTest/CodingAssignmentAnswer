@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer Survey Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+
+	h2
+	{
+				background-color:blue;
+				color:white;
+				border-style:double;
+				text-align:center;
+				 font-family: Arial, Helvetica, sans-serif;
+				font-size:30px;
+				border-top-left-radius:50px;
+				border-top-right-radius:50px;
+				border-bottom-left-radius:50px;
+				border-bottom-right-radius:50px;
+}
+.abc,.xyz,.pqr,.lmn,.tuv,.xyz,.omn
+{
+font-size:20px;
+color:black;
+}
+
+button:hover{
+padding:10px 10px;
+width:100px;
+background-color:pink;
+color:black;
+border-radius:15px;
+font-size:15px;
+}
+
+.center
+{
+	border: 2px solid;
+  position: absolute;
+  top: 287px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2px;
+
+				text-align:center;
+				background-color:orange;
+				width:450px;
+				border-top-left-radius:10px;
+				border-top-right-radius:10px;
+				border-bottom-left-radius:10px;
+				border-bottom-right-radius:10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 47px;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+	
+</style>
+</head>
+<body>
+		<h2><b>Customer Survey Form </b></h2>
+<div class="center">
+<form id="survey-form">
+<br><p class="abc"><b>First Name:<input type="text" id="fname" required></b></p>
+<p class="tuv"><b>Laste Name:<input type="text" id="lname" required></p>
+<p class="xyz"><b>Email:<input type="text" id="email" required></p>
+<p class="pqr"><b>contact Number:<input type="text" id="mobile" required></p>
+<p class="lmn"><b>Date Of Birth:<input type="date" id="dob" required></b>
+<p class="xyz">Country:
+
+	<select id="country" required>
+	<option>India</option>
+	<option>England</option>
+	<option>SriLanka</option>
+	<option>USA</option>
+	</select>
+	<p class="tuv"><b>Profession:<input type="text"  id="profession"></p>
+
+</P>
+	<p class="omn">Gender</p>
+  <input type="radio" id="male" name="fav_language">
+  <label for="html">male</label>
+  <input type="radio" id="female" name="fav_language" >
+  <label for="css">female</label>
+  <input type="radio" id="javascript" name="fav_language">
+<label for="css">other</label>
+</p>
+
+<center>
+	<button type="button" onclick="submitForm()" class="btn btn-outline-warning" style="width:100px; letter-spacing: 4px; color:black;">Submit</button>
+	<button type="button" onclick="resetForm()" class="btn btn-outline-danger" style="width:100px; letter-spacing: 4px; color:black;">Reset</button>
+</center>
+</b>
+</form>
+</div>
+		
+       
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="popup-content"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+	
+
+</body>
+</html>
